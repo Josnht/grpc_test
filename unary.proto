@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package unary;
+
+message Request {
+  string email = 1;
+}
+
+message Repspone {
+  string message = 1;
+}
+
+service Greeter {
+  rpc Email (Request) returns (Repspone) {}
+}
